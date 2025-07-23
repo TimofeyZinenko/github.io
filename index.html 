@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Timofey Zinenko's Portfolio</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <div class="header">
+        <img src="images/my-photo.jpg" alt="Timofey Zinenko" class="profile-img">
+        <h1>Hello, I'm Timofey Zinenko</h1>
+        <p>BackEnd Developer | ML Engineer | Data Scientist</p>
+    </div>
+    
+    <section>
+        <h2>Education</h2>
+        <ul>
+            <li>
+                <strong>Moscow Institute of Physics and Technology (State University)</strong>, Moscow<br>
+                Phystech School of Applied Mathematics and Informatics (FPMI), Mathematics and Computer Science
+            </li>
+            <li>
+                <strong>Moscow Aviation Institute (National Research University)</strong>, Moscow<br>
+                Aviation Technology, Aircraft Design
+            </li>
+        </ul>
+    </section>
+</body>
+</html>
