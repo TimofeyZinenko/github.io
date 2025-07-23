@@ -1,5 +1,13 @@
 # 👋 Hi! I'm Timofey Zinenko  
-### Backend Developer | ML Engineer | Data Scientist  
+### Backend Developer | ML Engineer | Data Scientist 
+
+## 🎓 Education  
+- **Moscow Institute of Physics and Technology**  
+  Mathematics & Computer Science (FPMI)  
+- **Moscow Aviation Institute**  
+  Aircraft Engineering (Specialization in Computational Methods)  
+
+
 
 ## 🚀 Featured Projects  
 
@@ -13,15 +21,10 @@
 🛠 **Tech Stack**: Python, Tweepy, Pandas, NLP  
 🔍 **Features**: Sentiment analysis, trend detection, data visualization  
 
-## 🎓 Education  
-- **Moscow Institute of Physics and Technology**  
-  Mathematics & Computer Science (FPMI)  
-- **Moscow Aviation Institute**  
-  Aircraft Engineering (Specialization in Computational Methods)  
 
 
 ## 🌐 Portfolio  
-🖥 **[Live Portfolio]([https://timofeyzinenko.github.io](https://timofeyzinenko.github.io/github.io/))** | 🐙 **[Source Code]([https://github.com/TimofeyZinenko/timofeyzinenko.github.io](https://github.com/TimofeyZinenko/github.io))**  
+🖥 **[Live Portfolio](https://timofeyzinenko.github.io/github.io/)** | 🐙 **[Source Code](https://github.com/TimofeyZinenko/github.io)**
 
 
 ## 💻 Technical Skills  
