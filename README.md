@@ -21,7 +21,7 @@
 
 
 ## 🌐 Portfolio  
-🖥 **[Live Portfolio](https://timofeyzinenko.github.io)** | 🐙 **[Source Code](https://github.com/TimofeyZinenko/timofeyzinenko.github.io)**  
+🖥 **[Live Portfolio]([https://timofeyzinenko.github.io](https://timofeyzinenko.github.io/github.io/))** | 🐙 **[Source Code]([https://github.com/TimofeyZinenko/timofeyzinenko.github.io](https://github.com/TimofeyZinenko/github.io))**  
 
 
 ## 💻 Technical Skills  
