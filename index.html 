@@ -1,17 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Timofey Zinenko's Portfolio</title>
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
     <div class="header">
-        <img src="images/my-photo.jpg" alt="Timofey Zinenko" class="profile-img">
+        <img src="images/photo.jpg" alt="Timofey Zinenko" class="profile-img">
         <h1>Hello, I'm Timofey Zinenko</h1>
         <p>BackEnd Developer | ML Engineer | Data Scientist</p>
     </div>
     
-    <section>
+    <section class="education">
         <h2>Education</h2>
         <ul>
             <li>

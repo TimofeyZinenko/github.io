@@ -3,64 +3,74 @@ body {
     font-family: 'Arial', sans-serif;
     text-align: center;
     margin: 0;
-    padding: 20px;
+    padding: 0;
     line-height: 1.6;
     color: #333;
     background-color: #f9f9f9;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* Header Section */
 .header {
-    margin-bottom: 30px;
-    padding-top: 20px;
+    margin: 40px 0;
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px;
 }
 
 /* Profile Image */
 .profile-img {
-    width: 200px;
-    height: 200px;
+    width: 220px;
+    height: 220px;
     object-fit: cover;
     border-radius: 50%;
-    border: 3px solid #2c3e50;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
+    border: 4px solid #2c3e50;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: block;
-    margin: 0 auto 20px;
+    margin: 0 auto 25px;
 }
 
 .profile-img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    transform: scale(1.03);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
 }
 
 /* Typography */
 h1 {
     color: #2c3e50;
-    margin-bottom: 10px;
-    font-size: 2.2em;
+    margin-bottom: 15px;
+    font-size: 2.4rem;
+    font-weight: 600;
 }
 
 p {
-    color: #7f8c8d;
-    font-size: 1.1em;
-    margin-bottom: 30px;
+    color: #4a5568;
+    font-size: 1.2rem;
+    margin-bottom: 35px;
 }
 
 /* Education Section */
-section {
+section.education {
     max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
+    margin: 0 auto 50px;
+    padding: 30px;
     background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+    width: 90%;
 }
 
 h2 {
     color: #2c3e50;
     border-bottom: 2px solid #eee;
     padding-bottom: 10px;
-    margin-top: 40px;
+    margin-top: 0;
+    font-size: 1.8rem;
+    text-align: center;
 }
 
 ul {
@@ -70,20 +80,37 @@ ul {
 }
 
 li {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     position: relative;
-    padding-left: 25px;
+    padding-left: 30px;
+    line-height: 1.7;
 }
 
 li:before {
-    content: "•";
-    color: #2c3e50;
-    font-size: 1.2em;
+    content: "▹";
+    color: #4299e1;
     position: absolute;
     left: 0;
-    top: -2px;
+    font-size: 1.2em;
 }
 
 strong {
     color: #2c3e50;
+    font-weight: 600;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .profile-img {
+        width: 180px;
+        height: 180px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    section.education {
+        padding: 20px;
+    }
 }
