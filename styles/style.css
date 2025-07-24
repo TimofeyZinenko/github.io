@@ -15,7 +15,8 @@ body {
 
 /* Header Section */
 .header {
-    margin: 40px 0;
+    margin: 40px 0 30px;
+    /* Adjusted margin-bottom */
     padding: 20px;
     width: 100%;
     max-width: 1200px;
@@ -28,7 +29,7 @@ body {
     object-fit: cover;
     border-radius: 50%;
     border: 4px solid #00BFFF;
-    /* Changed to bright blue */
+    /* Bright blue border */
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: block;
@@ -56,21 +57,21 @@ p {
 
 /* Generic Content Section */
 .content-section {
-    max-width: 800px;
-    /* This will be overridden by grid for specific items */
-    margin: 0 auto 30px;
-    /* This will be overridden by grid for specific items */
     padding: 30px;
     background: white;
     border-radius: 10px;
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
-    width: 90%;
-    /* This will be overridden by grid for specific items */
-    text-align: left;
-    /* Added for consistent sizing within the grid */
     box-sizing: border-box;
+    /* Include padding in element's total width and height */
     margin-bottom: 20px;
-    /* Adjust margin for grid items */
+    /* Space between sections within a column */
+    width: 100%;
+    /* Ensure sections take full width of their column */
+}
+
+.content-section:last-child {
+    margin-bottom: 0;
+    /* No margin after the last section in a column */
 }
 
 .content-section h2 {
@@ -172,75 +173,70 @@ p {
     text-decoration: underline;
 }
 
-/* --- New Grid Layout for Sections --- */
+/* --- Main Grid Layout for Columns --- */
 .main-content-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    /* Two columns */
+    grid-template-columns: 1.2fr 1.8fr;
+    /* Left column slightly smaller (Education, Languages), Right column larger (Projects, Skills) */
     gap: 30px;
-    /* Space between grid items */
+    /* Space between columns */
     max-width: 1200px;
-    /* Match header max-width */
+    /* Consistent with header max-width */
     width: 90%;
     margin-bottom: 30px;
     /* Space before contacts section */
+    align-items: start;
+    /* Align items to the top of their grid cell */
 }
 
-/* Specific grid item placements */
-.grid-item-education {
-    grid-column: 1 / 2;
-    /* First column */
-    grid-row: 1 / 2;
-    /* First row */
+.left-column,
+.right-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* Space between sections within the column */
 }
 
-.grid-item-projects {
-    grid-column: 2 / 3;
-    /* Second column */
-    grid-row: 1 / 2;
-    /* First row */
-}
-
-.grid-item-languages {
-    grid-column: 1 / 2;
-    /* First column */
-    grid-row: 2 / 3;
-    /* Second row */
-}
-
-.grid-item-skills {
-    grid-column: 2 / 3;
-    /* Second column */
-    grid-row: 2 / 3;
-    /* Second row */
-}
-
+/* Contact section below the grid */
 .grid-item-contacts {
-    grid-column: 1 / -1;
-    /* Span all columns */
     max-width: 800px;
     /* Keep original max-width for contact section */
     width: 90%;
+    margin-top: 0;
+    /* Remove top margin inherited from content-section, now managed by main-content-grid margin-bottom */
+    margin-bottom: 30px;
+    /* Ensure space at the bottom of the page */
 }
 
-/* --- Language Switcher Styles --- */
+/* --- Language Switcher Styles (Top Right) --- */
 .language-switcher {
-    margin-top: -15px;
-    /* Adjust as needed to position relative to header */
-    margin-bottom: 30px;
-    text-align: center;
+    position: absolute;
+    /* Position relative to the nearest positioned ancestor (body in this case) */
+    top: 20px;
+    /* Distance from top */
+    right: 20px;
+    /* Distance from right */
+    z-index: 1000;
+    /* Ensure it's above other content */
+    display: flex;
+    gap: 5px;
+    /* Small gap between buttons */
 }
 
 .lang-button {
     background-color: #f0f0f0;
     color: #555;
     border: 1px solid #ccc;
-    padding: 8px 15px;
-    margin: 0 5px;
+    padding: 5px 10px;
+    /* Smaller padding */
     cursor: pointer;
-    border-radius: 5px;
-    font-size: 1rem;
+    border-radius: 4px;
+    /* Slightly smaller border-radius */
+    font-size: 0.85rem;
+    /* Smaller font size */
     transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    white-space: nowrap;
+    /* Prevent buttons from wrapping text */
 }
 
 .lang-button:hover {
@@ -254,30 +250,36 @@ p {
     border-color: #4299e1;
 }
 
-/* --- Language Hiding Class --- */
-.hidden {
-    display: none !important;
-    /* Important to override other display properties */
-}
-
 /* Responsive Design */
 @media (max-width: 992px) {
 
-    /* Adjust breakpoint for tablet layout */
+    /* Tablet layout */
     .main-content-grid {
         grid-template-columns: 1fr;
         /* Stack columns on smaller screens */
         gap: 20px;
     }
 
-    .grid-item-education,
-    .grid-item-projects,
-    .grid-item-languages,
-    .grid-item-skills {
-        grid-column: 1 / -1;
-        /* All items span full width */
-        grid-row: auto;
-        /* Auto-place rows */
+    .left-column,
+    .right-column {
+        width: 100%;
+        /* Columns take full width */
+    }
+
+    .language-switcher {
+        position: static;
+        /* Remove absolute positioning */
+        margin-top: 15px;
+        margin-bottom: 20px;
+        text-align: center;
+        width: 100%;
+        justify-content: center;
+        /* Center buttons when static */
+    }
+
+    .header {
+        margin-top: 20px;
+        /* Adjust header margin after language switcher moves */
     }
 }
 
@@ -293,10 +295,5 @@ p {
 
     .content-section {
         padding: 20px;
-    }
-
-    .language-switcher {
-        margin-top: -10px;
-        /* Adjust for smaller screens */
     }
 }

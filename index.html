@@ -4,115 +4,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Timofey Zinenko's Portfolio</title>
+    <title data-i18n="pageTitle">Портфолио Тимофея Зиненко</title>
     <link rel="stylesheet" href="./styles/style.css">
 </head>
 
 <body>
 
-    <div class="header">
-        <img src="./images/photo.jpg" alt="Timofey Zinenko" class="profile-img">
-        <h1 class="lang-ru">Привет, я Тимофей Зиненко</h1>
-        <h1 class="lang-en hidden">Hello, I'm Timofey Zinenko</h1>
-        <p class="lang-ru">BackEnd Разработчик | ML Инженер | Специалист по данным</p>
-        <p class="lang-en hidden">BackEnd Developer | ML Engineer | Data Scientist</p>
-    </div>
-
     <div class="language-switcher">
         <button onclick="setLanguage('ru')" class="lang-button active" id="lang-ru-btn">Русский</button>
-        <button onclick="setLanguage('en')" class="lang-button" id="lang-en-btn">English</button>
+        <button onclick="setLanguage('en')" class="lang-button" id="lang-en-btn">Eng</button>
+    </div>
+
+    <div class="header">
+        <img src="./images/photo.jpg" alt="Timofey Zinenko" class="profile-img">
+        <h1 data-i18n="greeting">Привет, я Тимофей Зиненко</h1>
+        <p data-i18n="role">BackEnd Разработчик | ML Инженер | Специалист по данным</p>
     </div>
 
     <div class="main-content-grid">
-        <section class="content-section grid-item-education">
-            <h2 class="lang-ru">🎓 Образование</h2>
-            <h2 class="lang-en hidden">🎓 Education</h2>
-            <ul>
-                <li class="lang-ru">
-                    <strong>Московский Физико-Технический Институт (Государственный Университет)</strong>, Москва<br>
-                    Физтех-Школа Прикладной Математики и Информатики (ФПМИ), Математика и Компьютерные Науки
-                </li>
-                <li class="lang-en hidden">
-                    <strong>Moscow Institute of Physics and Technology (State University)</strong>, Moscow<br>
-                    Phystech School of Applied Mathematics and Informatics (FPMI), Mathematics and Computer Science
-                </li>
-                <li class="lang-ru">
-                    <strong>Московский Авиационный Институт (Национальный Исследовательский Университет)</strong>,
-                    Москва<br>
-                    Авиационная Техника, Проектирование Летательных Аппаратов
-                </li>
-                <li class="lang-en hidden">
-                    <strong>Moscow Aviation Institute (National Research University)</strong>, Moscow<br>
-                    Aviation Technology, Aircraft Design
-                </li>
-            </ul>
-        </section>
+        <div class="left-column">
+            <section class="content-section">
+                <h2 data-i18n="educationTitle">🎓 Образование</h2>
+                <ul>
+                    <li>
+                        <strong data-i18n="miptName">Московский Физико-Технический Институт (Государственный
+                            Университет)</strong>, <span data-i18n="moscow">Москва</span><br>
+                        <span data-i18n="miptFaculty">Физтех-Школа Прикладной Математики и Информатики (ФПМИ),
+                            Математика и Компьютерные Науки</span>
+                    </li>
+                    <li>
+                        <strong data-i18n="maiName">Московский Авиационный Институт (Национальный Исследовательский
+                            Университет)</strong>, <span data-i18n="moscow">Москва</span><br>
+                        <span data-i18n="maiFaculty">Авиационная Техника, Проектирование Летательных Аппаратов</span>
+                    </li>
+                </ul>
+            </section>
 
-        <section class="content-section grid-item-projects">
-            <h2 class="lang-ru">🚀 Избранные Проекты</h2>
-            <h2 class="lang-en hidden">🚀 Featured Projects</h2>
-            <div class="project-item">
-                <h3><a href="https://github.com/TimofeyZinenko/rust_code" target="_blank" rel="noopener noreferrer">Rust
-                        Code Collection</a></h3>
-                <p><strong class="lang-ru">📌 Описание:</strong> Растущая коллекция реализаций на Rust, демонстрирующая
-                    системное программирование и оптимизацию алгоритмов.</p>
-                <p class="lang-en hidden"><strong>📌 Description:</strong> A growing collection of Rust implementations
-                    showcasing system programming and algorithm optimization.</p>
-                <p><strong class="lang-ru">🛠 Стек Технологий:</strong> Rust, Tokio, Serde</p>
-                <p class="lang-en hidden"><strong>🛠 Tech Stack:</strong> Rust, Tokio, Serde</p>
-                <p><strong class="lang-ru">🔍 Основные Моменты:</strong> Память-безопасные решения, примеры
-                    параллельного программирования</p>
-                <p class="lang-en hidden"><strong>🔍 Highlights:</strong> Memory-safe solutions, concurrent programming
-                    examples</p>
-            </div>
-            <div class="project-item">
-                <h3><a href="https://github.com/TimofeyZinenko/Twitter_parser" target="_blank"
-                        rel="noopener noreferrer">Twitter Data Parser</a></h3>
-                <p><strong class="lang-ru">📌 Описание:</strong> Расширенный набор инструментов для извлечения и анализа
-                    данных платформы Twitter/X.
-                </p>
-                <p class="lang-en hidden"><strong>📌 Description:</strong> Advanced toolkit for extracting and analyzing
-                    Twitter/X platform data.
-                </p>
-                <p><strong class="lang-ru">🛠 Стек Технологий:</strong> Python, Tweepy, Pandas, NLP</p>
-                <p class="lang-en hidden"><strong>🛠 Tech Stack:</strong> Python, Tweepy, Pandas, NLP</p>
-                <p><strong class="lang-ru">🔍 Возможности:</strong> Анализ настроений, определение трендов, визуализация
-                    данных</p>
-                <p class="lang-en hidden"><strong>🔍 Features:</strong> Sentiment analysis, trend detection, data
-                    visualization</p>
-            </div>
-        </section>
+            <section class="content-section">
+                <h2 data-i18n="languagesTitle">🌐 Языки</h2>
+                <ul>
+                    <li><strong data-i18n="russianLang">Русский:</strong> <span data-i18n="native">Родной</span></li>
+                    <li><strong data-i18n="englishLang">Английский:</strong> B2 (<span
+                            data-i18n="upperIntermediate">Выше среднего</span>)</li>
+                    <li><strong data-i18n="germanLang">Немецкий:</strong> A1 (<span
+                            data-i18n="beginner">Начальный</span>)</li>
+                </ul>
+            </section>
+        </div>
 
-        <section class="content-section grid-item-languages">
-            <h2 class="lang-ru">🌐 Языки</h2>
-            <h2 class="lang-en hidden">🌐 Languages</h2>
-            <ul>
-                <li class="lang-ru"><strong>Русский:</strong> Родной</li>
-                <li class="lang-en hidden"><strong>Russian:</strong> Native</li>
-                <li class="lang-ru"><strong>Английский:</strong> B2 (Выше среднего)</li>
-                <li class="lang-en hidden"><strong>English:</strong> B2 (Upper-Intermediate)</li>
-                <li class="lang-ru"><strong>Немецкий:</strong> A1 (Начальный)</li>
-                <li class="lang-en hidden"><strong>German:</strong> A1 (Beginner)</li>
-            </ul>
-        </section>
+        <div class="right-column">
+            <section class="content-section">
+                <h2 data-i18n="projectsTitle">🚀 Избранные Проекты</h2>
+                <div class="project-item">
+                    <h3><a href="https://github.com/TimofeyZinenko/rust_code" target="_blank"
+                            rel="noopener noreferrer">Rust
+                            Code Collection</a></h3>
+                    <p><strong data-i18n="descriptionTag">📌 Описание:</strong> <span data-i18n="rustDesc">Растущая
+                            коллекция реализаций на Rust, демонстрирующая системное программирование и оптимизацию
+                            алгоритмов.</span></p>
+                    <p><strong data-i18n="techStackTag">🛠 Стек Технологий:</strong> Rust, Tokio, Serde</p>
+                    <p><strong data-i18n="highlightsTag">🔍 Основные Моменты:</strong> <span
+                            data-i18n="rustHighlights">Память-безопасные решения, примеры параллельного
+                            программирования</span></p>
+                </div>
+                <div class="project-item">
+                    <h3><a href="https://github.com/TimofeyZinenko/Twitter_parser" target="_blank"
+                            rel="noopener noreferrer">Twitter Data Parser</a></h3>
+                    <p><strong data-i18n="descriptionTag">📌 Описание:</strong> <span
+                            data-i18n="twitterDesc">Расширенный набор инструментов для извлечения и анализа данных
+                            платформы Twitter/X.</span>
+                    </p>
+                    <p><strong data-i18n="techStackTag">🛠 Стек Технологий:</strong> Python, Tweepy, Pandas, NLP</p>
+                    <p><strong data-i18n="featuresTag">🔍 Возможности:</strong> <span data-i18n="twitterFeatures">Анализ
+                            настроений, определение трендов, визуализация данных</span></p>
+                </div>
+            </section>
 
-        <section class="content-section grid-item-skills">
-            <h2 class="lang-ru">💻 Технические Навыки</h2>
-            <h2 class="lang-en hidden">💻 Technical Skills</h2>
-            <div class="skills-container">
-                <span class="skill-tag">Rust</span>
-                <span class="skill-tag">Python</span>
-                <span class="skill-tag">Machine Learning</span>
-                <span class="skill-tag">Data Engineering</span>
-                <span class="skill-tag">SQL</span>
-                <span class="skill-tag">Linux</span>
-            </div>
-        </section>
+            <section class="content-section">
+                <h2 data-i18n="skillsTitle">💻 Технические Навыки</h2>
+                <div class="skills-container">
+                    <span class="skill-tag">Rust</span>
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">Machine Learning</span>
+                    <span class="skill-tag">Data Engineering</span>
+                    <span class="skill-tag">SQL</span>
+                    <span class="skill-tag">Linux</span>
+                </div>
+            </section>
+        </div>
     </div>
 
     <section class="content-section grid-item-contacts">
-        <h2 class="lang-ru">📫 Контакты</h2>
-        <h2 class="lang-en hidden">📫 Contacts</h2>
+        <h2 data-i18n="contactsTitle">📫 Контакты</h2>
         <p class="contact-info">
             ✉️ Email: <a href="mailto:timofey.zinenko@gmail.com">timofey.zinenko@gmail.com</a>
             ✉️ Email: <a href="mailto:whitecat751@yandex.ru">whitecat751@yandex.ru</a>
@@ -120,27 +103,101 @@
     </section>
 
     <script>
+        // Объект с переводами
+        const translations = {
+            ru: {
+                pageTitle: "Портфолио Тимофея Зиненко",
+                greeting: "Привет, я Тимофей Зиненко",
+                role: "BackEnd Разработчик | ML Инженер | Специалист по данным",
+                educationTitle: "🎓 Образование",
+                miptName: "Московский Физико-Технический Институт (Государственный Университет)",
+                moscow: "Москва",
+                miptFaculty: "Физтех-Школа Прикладной Математики и Информатики (ФПМИ), Математика и Компьютерные Науки",
+                maiName: "Московский Авиационный Институт (Национальный Исследовательский Университет)",
+                maiFaculty: "Авиационная Техника, Проектирование Летательных Аппаратов",
+                projectsTitle: "🚀 Избранные Проекты",
+                descriptionTag: "📌 Описание:",
+                rustDesc: "Коллекция реализаций на Rust, демонстрирующая системное программирование и оптимизацию алгоритмов.",
+                techStackTag: "🛠 Стек Технологий:",
+                highlightsTag: "🔍 Основные Моменты:",
+                rustHighlights: "Безопасные по памяти решения, примеры параллельного программирования",
+                twitterDesc: "Набор инструментов для извлечения и анализа данных платформы Twitter/X.",
+                featuresTag: "🔍 Возможности:",
+                twitterFeatures: "Анализ настроений, определение трендов, визуализация данных",
+                languagesTitle: "🌐 Языки",
+                russianLang: "Русский:",
+                native: "Родной",
+                englishLang: "Английский:",
+                upperIntermediate: "Выше среднего",
+                germanLang: "Немецкий:",
+                beginner: "Начальный",
+                skillsTitle: "💻 Технические Навыки",
+                contactsTitle: "📫 Контакты"
+            },
+            en: {
+                pageTitle: "Timofey Zinenko's Portfolio",
+                greeting: "Hello, I'm Timofey Zinenko",
+                role: "BackEnd Developer | ML Engineer | Data Scientist",
+                educationTitle: "🎓 Education",
+                miptName: "Moscow Institute of Physics and Technology (State University)",
+                moscow: "Moscow",
+                miptFaculty: "Phystech School of Applied Mathematics and Informatics (FPMI), Mathematics and Computer Science",
+                maiName: "Moscow Aviation Institute (National Research University)",
+                maiFaculty: "Aviation Technology, Aircraft Design",
+                projectsTitle: "🚀 Featured Projects",
+                descriptionTag: "📌 Description:",
+                rustDesc: "A growing collection of Rust implementations showcasing system programming and algorithm optimization.",
+                techStackTag: "🛠 Tech Stack:",
+                highlightsTag: "🔍 Highlights:",
+                rustHighlights: "Memory-safe solutions, concurrent programming examples",
+                twitterDesc: "Advanced toolkit for extracting and analyzing Twitter/X platform data.",
+                featuresTag: "🔍 Features:",
+                twitterFeatures: "Sentiment analysis, trend detection, data visualization",
+                languagesTitle: "🌐 Languages",
+                russianLang: "Russian:",
+                native: "Native",
+                englishLang: "English:",
+                upperIntermediate: "Upper-Intermediate",
+                germanLang: "German:",
+                beginner: "Beginner",
+                skillsTitle: "💻 Technical Skills",
+                contactsTitle: "📫 Contacts"
+            }
+        };
+
         function setLanguage(lang) {
-            document.querySelectorAll('.lang-ru').forEach(el => el.classList.add('hidden'));
-            document.querySelectorAll('.lang-en').forEach(el => el.classList.add('hidden'));
+            // Обновляем все элементы с атрибутом data-i18n
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                if (translations[lang] && translations[lang][key]) {
+                    element.textContent = translations[lang][key];
+                }
+            });
 
-            document.querySelectorAll(`.lang-${lang}`).forEach(el => el.classList.remove('hidden'));
+            document.querySelectorAll('.project-item strong[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                if (translations[lang] && translations[lang][key]) {
+                    element.textContent = translations[lang][key];
+                }
+            });
 
-            // Update active button state
+
+            const pageTitleElement = document.querySelector('title');
+            if (pageTitleElement && translations[lang] && translations[lang].pageTitle) {
+                pageTitleElement.textContent = translations[lang].pageTitle;
+            }
+
             document.getElementById('lang-ru-btn').classList.remove('active');
             document.getElementById('lang-en-btn').classList.remove('active');
             document.getElementById(`lang-${lang}-btn`).classList.add('active');
 
-            // Store language preference (optional, for persistence across sessions)
             localStorage.setItem('preferredLang', lang);
 
-            // Update HTML lang attribute for better accessibility and SEO
             document.documentElement.lang = lang;
         }
 
-        // On page load, check for preferred language or set default
         document.addEventListener('DOMContentLoaded', () => {
-            const preferredLang = localStorage.getItem('preferredLang') || 'ru'; // Default to Russian
+            const preferredLang = localStorage.getItem('preferredLang') || 'ru';
             setLanguage(preferredLang);
         });
     </script>
