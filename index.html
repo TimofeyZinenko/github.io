@@ -12,19 +12,36 @@
 
     <div class="header">
         <img src="./images/photo.jpg" alt="Timofey Zinenko" class="profile-img">
-        <h1>Hello, I'm Timofey Zinenko</h1>
-        <p>BackEnd Developer | ML Engineer | Data Scientist</p>
+        <h1 class="lang-ru">Привет, я Тимофей Зиненко</h1>
+        <h1 class="lang-en hidden">Hello, I'm Timofey Zinenko</h1>
+        <p class="lang-ru">BackEnd Разработчик | ML Инженер | Специалист по данным</p>
+        <p class="lang-en hidden">BackEnd Developer | ML Engineer | Data Scientist</p>
+    </div>
+
+    <div class="language-switcher">
+        <button onclick="setLanguage('ru')" class="lang-button active" id="lang-ru-btn">Русский</button>
+        <button onclick="setLanguage('en')" class="lang-button" id="lang-en-btn">English</button>
     </div>
 
     <div class="main-content-grid">
         <section class="content-section grid-item-education">
-            <h2>🎓 Education</h2>
+            <h2 class="lang-ru">🎓 Образование</h2>
+            <h2 class="lang-en hidden">🎓 Education</h2>
             <ul>
-                <li>
+                <li class="lang-ru">
+                    <strong>Московский Физико-Технический Институт (Государственный Университет)</strong>, Москва<br>
+                    Физтех-Школа Прикладной Математики и Информатики (ФПМИ), Математика и Компьютерные Науки
+                </li>
+                <li class="lang-en hidden">
                     <strong>Moscow Institute of Physics and Technology (State University)</strong>, Moscow<br>
                     Phystech School of Applied Mathematics and Informatics (FPMI), Mathematics and Computer Science
                 </li>
-                <li>
+                <li class="lang-ru">
+                    <strong>Московский Авиационный Институт (Национальный Исследовательский Университет)</strong>,
+                    Москва<br>
+                    Авиационная Техника, Проектирование Летательных Аппаратов
+                </li>
+                <li class="lang-en hidden">
                     <strong>Moscow Aviation Institute (National Research University)</strong>, Moscow<br>
                     Aviation Technology, Aircraft Design
                 </li>
@@ -32,37 +49,56 @@
         </section>
 
         <section class="content-section grid-item-projects">
-            <h2>🚀 Featured Projects</h2>
+            <h2 class="lang-ru">🚀 Избранные Проекты</h2>
+            <h2 class="lang-en hidden">🚀 Featured Projects</h2>
             <div class="project-item">
                 <h3><a href="https://github.com/TimofeyZinenko/rust_code" target="_blank" rel="noopener noreferrer">Rust
                         Code Collection</a></h3>
-                <p><strong>📌 Description:</strong> A growing collection of Rust implementations showcasing system
-                    programming and algorithm optimization.</p>
-                <p><strong>🛠 Tech Stack:</strong> Rust, Tokio, Serde</p>
-                <p><strong>🔍 Highlights:</strong> Memory-safe solutions, concurrent programming examples</p>
+                <p><strong class="lang-ru">📌 Описание:</strong> Растущая коллекция реализаций на Rust, демонстрирующая
+                    системное программирование и оптимизацию алгоритмов.</p>
+                <p class="lang-en hidden"><strong>📌 Description:</strong> A growing collection of Rust implementations
+                    showcasing system programming and algorithm optimization.</p>
+                <p><strong class="lang-ru">🛠 Стек Технологий:</strong> Rust, Tokio, Serde</p>
+                <p class="lang-en hidden"><strong>🛠 Tech Stack:</strong> Rust, Tokio, Serde</p>
+                <p><strong class="lang-ru">🔍 Основные Моменты:</strong> Память-безопасные решения, примеры
+                    параллельного программирования</p>
+                <p class="lang-en hidden"><strong>🔍 Highlights:</strong> Memory-safe solutions, concurrent programming
+                    examples</p>
             </div>
             <div class="project-item">
                 <h3><a href="https://github.com/TimofeyZinenko/Twitter_parser" target="_blank"
                         rel="noopener noreferrer">Twitter Data Parser</a></h3>
-                <p><strong>📌 Description:</strong> Advanced toolkit for extracting and analyzing Twitter/X platform
-                    data.
+                <p><strong class="lang-ru">📌 Описание:</strong> Расширенный набор инструментов для извлечения и анализа
+                    данных платформы Twitter/X.
                 </p>
-                <p><strong>🛠 Tech Stack:</strong> Python, Tweepy, Pandas, NLP</p>
-                <p><strong>🔍 Features:</strong> Sentiment analysis, trend detection, data visualization</p>
+                <p class="lang-en hidden"><strong>📌 Description:</strong> Advanced toolkit for extracting and analyzing
+                    Twitter/X platform data.
+                </p>
+                <p><strong class="lang-ru">🛠 Стек Технологий:</strong> Python, Tweepy, Pandas, NLP</p>
+                <p class="lang-en hidden"><strong>🛠 Tech Stack:</strong> Python, Tweepy, Pandas, NLP</p>
+                <p><strong class="lang-ru">🔍 Возможности:</strong> Анализ настроений, определение трендов, визуализация
+                    данных</p>
+                <p class="lang-en hidden"><strong>🔍 Features:</strong> Sentiment analysis, trend detection, data
+                    visualization</p>
             </div>
         </section>
 
         <section class="content-section grid-item-languages">
-            <h2>🌐 Languages</h2>
+            <h2 class="lang-ru">🌐 Языки</h2>
+            <h2 class="lang-en hidden">🌐 Languages</h2>
             <ul>
-                <li><strong>Russian:</strong> Native</li>
-                <li><strong>English:</strong> B2 (Upper-Intermediate)</li>
-                <li><strong>German:</strong> A1 (Beginner)</li>
+                <li class="lang-ru"><strong>Русский:</strong> Родной</li>
+                <li class="lang-en hidden"><strong>Russian:</strong> Native</li>
+                <li class="lang-ru"><strong>Английский:</strong> B2 (Выше среднего)</li>
+                <li class="lang-en hidden"><strong>English:</strong> B2 (Upper-Intermediate)</li>
+                <li class="lang-ru"><strong>Немецкий:</strong> A1 (Начальный)</li>
+                <li class="lang-en hidden"><strong>German:</strong> A1 (Beginner)</li>
             </ul>
         </section>
 
         <section class="content-section grid-item-skills">
-            <h2>💻 Technical Skills</h2>
+            <h2 class="lang-ru">💻 Технические Навыки</h2>
+            <h2 class="lang-en hidden">💻 Technical Skills</h2>
             <div class="skills-container">
                 <span class="skill-tag">Rust</span>
                 <span class="skill-tag">Python</span>
@@ -75,12 +111,39 @@
     </div>
 
     <section class="content-section grid-item-contacts">
-        <h2>📫 Contacts</h2>
+        <h2 class="lang-ru">📫 Контакты</h2>
+        <h2 class="lang-en hidden">📫 Contacts</h2>
         <p class="contact-info">
             ✉️ Email: <a href="mailto:timofey.zinenko@gmail.com">timofey.zinenko@gmail.com</a>
             ✉️ Email: <a href="mailto:whitecat751@yandex.ru">whitecat751@yandex.ru</a>
         </p>
     </section>
+
+    <script>
+        function setLanguage(lang) {
+            document.querySelectorAll('.lang-ru').forEach(el => el.classList.add('hidden'));
+            document.querySelectorAll('.lang-en').forEach(el => el.classList.add('hidden'));
+
+            document.querySelectorAll(`.lang-${lang}`).forEach(el => el.classList.remove('hidden'));
+
+            // Update active button state
+            document.getElementById('lang-ru-btn').classList.remove('active');
+            document.getElementById('lang-en-btn').classList.remove('active');
+            document.getElementById(`lang-${lang}-btn`).classList.add('active');
+
+            // Store language preference (optional, for persistence across sessions)
+            localStorage.setItem('preferredLang', lang);
+
+            // Update HTML lang attribute for better accessibility and SEO
+            document.documentElement.lang = lang;
+        }
+
+        // On page load, check for preferred language or set default
+        document.addEventListener('DOMContentLoaded', () => {
+            const preferredLang = localStorage.getItem('preferredLang') || 'ru'; // Default to Russian
+            setLanguage(preferredLang);
+        });
+    </script>
 
 </body>
 
