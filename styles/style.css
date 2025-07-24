@@ -27,7 +27,7 @@ body {
     height: 220px;
     object-fit: cover;
     border-radius: 50%;
-    border: 4px solid #2c3e50;
+    border: 4px solid #00BFFF;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: block;
@@ -56,13 +56,20 @@ p {
 /* Generic Content Section */
 .content-section {
     max-width: 800px;
+    /* This will be overridden by grid for specific items */
     margin: 0 auto 30px;
+    /* This will be overridden by grid for specific items */
     padding: 30px;
     background: white;
     border-radius: 10px;
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
     width: 90%;
+    /* This will be overridden by grid for specific items */
     text-align: left;
+    /* Added for consistent sizing within the grid */
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    /* Adjust margin for grid items */
 }
 
 .content-section h2 {
@@ -164,7 +171,79 @@ p {
     text-decoration: underline;
 }
 
+/* --- New Grid Layout for Sections --- */
+.main-content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* Two columns */
+    gap: 30px;
+    /* Space between grid items */
+    max-width: 1200px;
+    /* Match header max-width */
+    width: 90%;
+    margin-bottom: 30px;
+    /* Space before contacts section */
+}
+
+/* Specific grid item placements */
+.grid-item-education {
+    grid-column: 1 / 2;
+    /* First column */
+    grid-row: 1 / 2;
+    /* First row */
+}
+
+.grid-item-projects {
+    grid-column: 2 / 3;
+    /* Second column */
+    grid-row: 1 / 2;
+    /* First row */
+}
+
+.grid-item-languages {
+    grid-column: 1 / 2;
+    /* First column */
+    grid-row: 2 / 3;
+    /* Second row */
+}
+
+.grid-item-skills {
+    grid-column: 2 / 3;
+    /* Second column */
+    grid-row: 2 / 3;
+    /* Second row */
+}
+
+.grid-item-contacts {
+    grid-column: 1 / -1;
+    /* Span all columns */
+    max-width: 800px;
+    /* Keep original max-width for contact section */
+    width: 90%;
+}
+
+
 /* Responsive Design */
+@media (max-width: 992px) {
+
+    /* Adjust breakpoint for tablet layout */
+    .main-content-grid {
+        grid-template-columns: 1fr;
+        /* Stack columns on smaller screens */
+        gap: 20px;
+    }
+
+    .grid-item-education,
+    .grid-item-projects,
+    .grid-item-languages,
+    .grid-item-skills {
+        grid-column: 1 / -1;
+        /* All items span full width */
+        grid-row: auto;
+        /* Auto-place rows */
+    }
+}
+
 @media (max-width: 768px) {
     .profile-img {
         width: 180px;
