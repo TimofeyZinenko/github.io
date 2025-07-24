@@ -5,7 +5,7 @@
 - **Moscow Institute of Physics and Technology**  
   Mathematics & Computer Science (FPMI)  
 - **Moscow Aviation Institute**  
-  Aircraft Engineering (Specialization in Computational Methods)  
+  Aircraft Engineering 
 
 
 
