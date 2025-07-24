@@ -24,7 +24,7 @@
 
 
 ## 🌐 Portfolio  
-🖥 **[Live Portfolio](https://timofeyzinenko.github.io/github.io/)** | 🐙 **[Source Code](https://github.com/TimofeyZinenko/github.io)**
+🖥 **[Live Portfolio](https://timofeyzinenko.github.io/)** | 🐙 **[Source Code](https://github.com/TimofeyZinenko/timofeyzinenko.github.io)**
 
 
 ## 💻 Technical Skills  
@@ -32,4 +32,4 @@
 
 ## 📫 Contact  
 ✉️ Email: [timofey.zinenko@gmail.com](mailto:timofey.zinenko@gmail.com)  
-
+✉️ Email: [timofey.zinenko@gmail.com](mailto:timofey.zinenko@gmail.com) 
