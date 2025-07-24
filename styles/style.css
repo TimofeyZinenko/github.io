@@ -185,8 +185,7 @@ p {
     width: 90%;
     margin-bottom: 30px;
     /* Space before contacts section */
-    align-items: start;
-    /* Align items to the top of their grid cell */
+    /* Remove align-items: start; from here, it will be handled by column flex containers */
 }
 
 .left-column,
@@ -195,7 +194,12 @@ p {
     flex-direction: column;
     gap: 20px;
     /* Space between sections within the column */
+    height: 100%;
+    /* Ensure columns take full height of their grid cell */
+    justify-content: space-between;
+    /* Pushes first item to top, last to bottom, distributes space in between */
 }
+
 
 /* Contact section below the grid */
 .grid-item-contacts {
@@ -264,6 +268,10 @@ p {
     .right-column {
         width: 100%;
         /* Columns take full width */
+        height: auto;
+        /* Reset height for stacking */
+        justify-content: flex-start;
+        /* Reset justification for stacking */
     }
 
     .language-switcher {
